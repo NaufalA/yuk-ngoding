@@ -96,7 +96,7 @@ public class CoursePresenter extends BasePresenter {
                 System.out.println("Average Score\t: " + report.averageScore);
                 System.out.println("Passed Students\t: " + report.passedStudent);
                 System.out.println("Total Students\t: " + report.totalStudent);
-                System.out.println("Passing Percentage\t: " + ((report.passedStudent/report.totalStudent)*100) + "%");
+                System.out.println("Passing Percentage\t: " + ((report.passedStudent / report.totalStudent) * 100) + "%");
                 break;
             case 0:
                 break;
@@ -208,9 +208,16 @@ public class CoursePresenter extends BasePresenter {
                     (i + 1) + "\t | " +
                             cr.getStudent().getUser().getEmail() + "\t | " +
                             cr.getCourse().getTitle() + "\t | " +
-                            cr.getApproved() + "\t | " +
+                            (cr.getApproved() ? "Approved" : "Not Approved") + "\t | " +
                             cr.getScore()
             );
         }
+        StringHelper.printInputPrompt("Choose one to approve");
+        Integer choice = InputHelper.inputInt();
+
+        CourseRecord approvedRecord = courseRecords.get(choice - 1);
+        approvedRecord.setApproved(true);
+
+        courseRecordService.update(approvedRecord);
     }
 }

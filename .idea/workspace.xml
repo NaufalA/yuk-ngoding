@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add Auth and User Presenter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CoursePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/dtos/CourseReportResponseDto.java" afterDir="false" />
+    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add Course Presenter and Reporting feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/SimpleSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/classes/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/classes/BasePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/InputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/InputHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/StringHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CoursePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CoursePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669195745904</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Course Presenter and Reporting feature">
+      <created>1669211738391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669211738391</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,7 +156,8 @@
     <MESSAGE value="Add User Activation and Authentication feature" />
     <MESSAGE value="Add Course and Student Course Registration feature" />
     <MESSAGE value="Add Auth and User Presenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Auth and User Presenter" />
+    <MESSAGE value="Add Course Presenter and Reporting feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Course Presenter and Reporting feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
