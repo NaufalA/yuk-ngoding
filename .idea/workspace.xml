@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add Course and Student Course Registration feature">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/useractivation/UserActivationPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/classes/BasePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/InputHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/StringHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/UserSessionUtility.java" afterDir="false" />
+    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add Auth and User Presenter">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CoursePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/dtos/CourseReportResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/SimpleSeeder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/user/UserPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/classes/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/classes/BasePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/InputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/InputHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/utils/StringHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/user/Code/Intro/yuk-ngoding/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/user/Code/Intro/yuk-ngoding/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.pinterngoding.shared.constants" />
@@ -77,8 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestingTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pinterngoding.TestingTesting" />
+    <configuration name="SimpleSeeder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pinterngoding.SimpleSeeder" />
       <module name="yuk-ngoding" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +94,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TestingTesting" />
+        <item itemvalue="Application.SimpleSeeder" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669189137700</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Auth and User Presenter">
+      <created>1669195745904</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669195745904</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,7 +161,8 @@
     <MESSAGE value="Add Student and User feature&#10;&#10;and add Repository and Service Definitions" />
     <MESSAGE value="Add User Activation and Authentication feature" />
     <MESSAGE value="Add Course and Student Course Registration feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Course and Student Course Registration feature" />
+    <MESSAGE value="Add Auth and User Presenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Auth and User Presenter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -162,6 +171,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthService.java</url>
           <line>16</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

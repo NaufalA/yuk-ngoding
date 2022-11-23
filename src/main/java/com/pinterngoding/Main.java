@@ -3,6 +3,7 @@ package com.pinterngoding;
 import com.pinterngoding.features.auth.AuthPresenter;
 import com.pinterngoding.features.auth.AuthService;
 import com.pinterngoding.features.auth.interfaces.IAuthService;
+import com.pinterngoding.features.course.CoursePresenter;
 import com.pinterngoding.features.course.CourseRepository;
 import com.pinterngoding.features.course.CourseService;
 import com.pinterngoding.features.course.interfaces.ICourseRepository;
@@ -35,7 +36,7 @@ public class Main {
         EntityManager em = JPAUtility.getEntityManager();
         IUserRepository userRepository = new UserRepository(em);
         IUserService userService = new UserService(userRepository);
-        UserPresenter userPresenter = new UserPresenter(userService);
+        UserPresenter userPresenter = new UserPresenter("User", userService);
 
         IStudentRepository studentRepository = new StudentRepository(em);
         IStudentService studentService = new StudentService(studentRepository);
@@ -52,8 +53,10 @@ public class Main {
 
         ICourseRecordRepository courseRecordRepository = new CourseRecordRepository(em);
         ICourseRecordService courseRecordService = new CourseRecordService(courseRecordRepository);
-        
-        Menu menu = new Menu(authPresenter, userPresenter, userActivationPresenter);
+
+        CoursePresenter coursePresenter = new CoursePresenter("Course", courseService, courseRecordService);
+
+        Menu menu = new Menu(authPresenter, userPresenter, userActivationPresenter, coursePresenter);
 
         boolean stop = false;
         while (!stop) {

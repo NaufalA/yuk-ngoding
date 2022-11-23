@@ -30,11 +30,11 @@ public class Course extends BaseEntity {
 
     @Temporal(TemporalType.TIME)
     @Column(name = "schedule_start", nullable = false)
-    private Time scheduleStart;
+    private Time scheduleStart = Time.valueOf("08:00:00");
 
     @Temporal(TemporalType.TIME)
     @Column(name = "schedule_end", nullable = false)
-    private Time scheduleEnd;
+    private Time scheduleEnd = Time.valueOf("17:00:00");
 
     @Enumerated(EnumType.STRING)
     @Column(name = "pricing_type", nullable = false)
@@ -48,10 +48,10 @@ public class Course extends BaseEntity {
     private CourseCategory courseCategory = CourseCategory.GENERAL;
 
     @Column(name = "min_score", nullable = false)
-    private Integer minScore;
+    private Integer minScore = 0;
 
     @Column(name = "teacher_name", nullable = false)
-    private String teacherName;
+    private String teacherName = "";
 
     @OneToMany(mappedBy = "course")
     private List<CourseRecord> courseRecords = new ArrayList<>();
@@ -91,6 +91,7 @@ public class Course extends BaseEntity {
     }
 
     public Date getEndDate() {
+        endDate = new Date(startDate.getTime() + TimeUnit.DAYS.toMillis(duration));
         return endDate;
     }
 

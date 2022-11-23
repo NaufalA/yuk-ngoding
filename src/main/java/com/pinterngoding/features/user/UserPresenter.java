@@ -13,7 +13,8 @@ import java.util.Arrays;
 public class UserPresenter extends BasePresenter {
     IUserService userService;
 
-    public UserPresenter(IUserService userService) {
+    public UserPresenter(String title, IUserService userService) {
+        super(title);
         this.userService = userService;
     }
 
@@ -38,8 +39,9 @@ public class UserPresenter extends BasePresenter {
         student.setPhone(InputHelper.inputString(false));
         StringHelper.printInputPrompt("Identity Number");
         student.setIdentityNumber(InputHelper.inputString(false));
-        StringHelper.printInputPrompt("Last Education");
-        Arrays.stream(Education.values()).forEach(e -> System.out.println("| " + e));
+        StringBuilder educationPrint = new StringBuilder();
+        Arrays.stream(Education.values()).forEach(e -> educationPrint.append("| ").append(e).append("\n"));
+        StringHelper.printInputPrompt("Last Education\n" + educationPrint);
         student.setEducation(Education.valueOf(InputHelper.inputString(false).toUpperCase()));
 
         newUser.setStudent(student);

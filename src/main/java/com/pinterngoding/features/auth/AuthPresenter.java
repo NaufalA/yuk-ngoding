@@ -2,11 +2,10 @@ package com.pinterngoding.features.auth;
 
 import com.pinterngoding.entity.User;
 import com.pinterngoding.features.auth.interfaces.IAuthService;
-import com.pinterngoding.shared.classes.BasePresenter;
 import com.pinterngoding.shared.utils.InputHelper;
 import com.pinterngoding.shared.utils.StringHelper;
 
-public class AuthPresenter extends BasePresenter {
+public class AuthPresenter {
     IAuthService authService;
 
     public AuthPresenter(IAuthService authService) {

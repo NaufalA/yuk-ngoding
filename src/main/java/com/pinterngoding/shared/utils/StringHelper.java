@@ -2,9 +2,9 @@ package com.pinterngoding.shared.utils;
 
 public class StringHelper {
     public static void printHeader(String title) {
-        System.out.println("========================================");
+        printSeparator("=", 30);
         System.out.println(title);
-        System.out.println("----------------------------------------");
+        printSeparator("-", 30);
     }
 
     public static void printInputPrompt(String prompt) {
@@ -13,5 +13,14 @@ public class StringHelper {
         } else {
             System.out.print("> ");
         }
+    }
+
+    public static void printSeparator(String separatorString, Integer size) {
+        String output = "";
+        for (int i = 0; i < size; i++) {
+            output = output.concat(separatorString);
+        }
+
+        System.out.println(output);
     }
 }

@@ -1,5 +1,7 @@
 package com.pinterngoding.shared.utils;
 
+import java.sql.Time;
+import java.util.Date;
 import java.util.Scanner;
 
 public class InputHelper {
@@ -57,7 +59,7 @@ public class InputHelper {
                     input = Integer.parseInt(inputString);
                 }
                 if (input < min || input > max) {
-                    System.out.println("Invalid Input");
+                    System.out.println("Please input value between " + min + " and " + max);
                     inputValid = false;
                     StringHelper.printInputPrompt("");
                     continue;
@@ -86,6 +88,46 @@ public class InputHelper {
             } catch (Exception e) {
                 System.out.println("Invalid Input");
                 inputValid = false;
+            }
+        } while (!inputValid);
+
+        return input;
+    }
+
+    public static Date inputDate() {
+        Date input = null;
+        boolean inputValid;
+        do {
+            try {
+                String inputString = scanner.nextLine();
+                if (!inputString.equals("")) {
+                    input = java.sql.Date.valueOf(inputString);
+                }
+                inputValid = true;
+            } catch (Exception e) {
+                System.out.println("Invalid Input");
+                inputValid = false;
+                StringHelper.printInputPrompt("");
+            }
+        } while (!inputValid);
+
+        return input;
+    }
+
+    public static Time inputTime() {
+        Time input = null;
+        boolean inputValid;
+        do {
+            try {
+                String inputString = scanner.nextLine();
+                if (!inputString.equals("")) {
+                    input = java.sql.Time.valueOf(inputString);
+                }
+                inputValid = true;
+            } catch (Exception e) {
+                System.out.println("Invalid Input");
+                inputValid = false;
+                StringHelper.printInputPrompt("");
             }
         } while (!inputValid);
 
