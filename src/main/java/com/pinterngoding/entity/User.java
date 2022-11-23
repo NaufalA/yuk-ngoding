@@ -4,6 +4,7 @@ import com.pinterngoding.shared.classes.BaseEntity;
 import com.pinterngoding.shared.constants.UserType;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -22,7 +23,7 @@ public class User extends BaseEntity {
     private Student student;
 
     @OneToMany(mappedBy = "relatedUser", fetch = FetchType.LAZY)
-    private Set<UserActivation> userActivations;
+    private List<UserActivation> userActivations;
 
     public User() {
         isActive = false;
@@ -68,11 +69,11 @@ public class User extends BaseEntity {
         this.student = student;
     }
 
-    public Set<UserActivation> getUserActivations() {
+    public List<UserActivation> getUserActivations() {
         return userActivations;
     }
 
-    public void setUserActivations(Set<UserActivation> userActivations) {
+    public void setUserActivations(List<UserActivation> userActivations) {
         this.userActivations = userActivations;
     }
 

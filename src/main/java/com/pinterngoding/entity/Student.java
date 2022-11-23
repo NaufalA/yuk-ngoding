@@ -4,6 +4,9 @@ import com.pinterngoding.shared.classes.BaseEntity;
 import com.pinterngoding.shared.constants.Education;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "students")
 public class Student extends BaseEntity {
@@ -26,6 +29,9 @@ public class Student extends BaseEntity {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @OneToMany(mappedBy = "student")
+    private List<CourseRecord> courseRecords = new ArrayList<>();
 
     public String getFirstName() {
         return firstName;
@@ -89,6 +95,14 @@ public class Student extends BaseEntity {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public List<CourseRecord> getCourseRecords() {
+        return courseRecords;
+    }
+
+    public void setCourseRecords(List<CourseRecord> courseRecords) {
+        this.courseRecords = courseRecords;
     }
 
     @Override

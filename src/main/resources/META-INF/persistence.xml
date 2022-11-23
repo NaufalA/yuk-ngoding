@@ -8,6 +8,9 @@
         <class>com.pinterngoding.entity.User</class>
         <class>com.pinterngoding.entity.Student</class>
         <class>com.pinterngoding.entity.UserActivation</class>
+        <class>com.pinterngoding.entity.Course</class>
+        <class>com.pinterngoding.entity.CourseRecordKey</class>
+        <class>com.pinterngoding.entity.CourseRecord</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="javax.persistence.jdbc.url"

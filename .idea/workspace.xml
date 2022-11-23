@@ -4,17 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add Student and User feature&#10;&#10;and add Repository and Service Definitions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/UserActivation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/auth/interfaces/IAuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/useractivation/UserActivationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/useractivation/UserActivationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/useractivation/interfaces/IUserActivationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/useractivation/interfaces/IUserActivationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/constants/UserType.java" afterDir="false" />
+    <list default="true" id="39798d66-0ac7-448d-9900-b14fb6119c92" name="Changes" comment="Add User Activation and Authentication feature">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/CourseRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/CourseRecordKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/CourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/interfaces/ICourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/course/interfaces/ICourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/CourseRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/features/courserecord/interfaces/ICourseRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/constants/CourseCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/shared/constants/PricingType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/TestingTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pinterngoding/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
@@ -26,10 +32,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669175344353</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add User Activation and Authentication feature">
+      <created>1669183750602</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669183750602</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add Student and User feature&#10;&#10;and add Repository and Service Definitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Student and User feature&#10;&#10;and add Repository and Service Definitions" />
+    <MESSAGE value="Add User Activation and Authentication feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add User Activation and Authentication feature" />
   </component>
 </project>
