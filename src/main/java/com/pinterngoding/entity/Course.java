@@ -5,6 +5,7 @@ import com.pinterngoding.shared.constants.PricingType;
 import com.pinterngoding.shared.constants.CourseCategory;
 import jakarta.persistence.*;
 
+import java.sql.Time;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -27,6 +28,14 @@ public class Course extends BaseEntity {
     @Transient
     private Date endDate = new Date(startDate.getTime() + duration * TimeUnit.DAYS.toMillis(duration));
 
+    @Temporal(TemporalType.TIME)
+    @Column(name = "schedule_start", nullable = false)
+    private Time scheduleStart;
+
+    @Temporal(TemporalType.TIME)
+    @Column(name = "schedule_end", nullable = false)
+    private Time scheduleEnd;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "pricing_type", nullable = false)
     private PricingType pricingType = PricingType.FREE;
@@ -40,6 +49,9 @@ public class Course extends BaseEntity {
 
     @Column(name = "min_score", nullable = false)
     private Integer minScore;
+
+    @Column(name = "teacher_name", nullable = false)
+    private String teacherName;
 
     @OneToMany(mappedBy = "course")
     private List<CourseRecord> courseRecords = new ArrayList<>();
@@ -61,7 +73,6 @@ public class Course extends BaseEntity {
     }
 
     public Date getStartDate() {
-
         return startDate;
     }
 
@@ -83,6 +94,22 @@ public class Course extends BaseEntity {
         return endDate;
     }
 
+    public Time getScheduleStart() {
+        return scheduleStart;
+    }
+
+    public void setScheduleStart(Time scheduleStart) {
+        this.scheduleStart = scheduleStart;
+    }
+
+    public Time getScheduleEnd() {
+        return scheduleEnd;
+    }
+
+    public void setScheduleEnd(Time scheduleEnd) {
+        this.scheduleEnd = scheduleEnd;
+    }
+
     public PricingType getPricingType() {
         return pricingType;
     }
@@ -99,11 +126,11 @@ public class Course extends BaseEntity {
         this.price = price;
     }
 
-    public CourseCategory getTrainingCategory() {
+    public CourseCategory getCourseCategory() {
         return courseCategory;
     }
 
-    public void setTrainingCategory(CourseCategory courseCategory) {
+    public void setCourseCategory(CourseCategory courseCategory) {
         this.courseCategory = courseCategory;
     }
 
@@ -113,6 +140,14 @@ public class Course extends BaseEntity {
 
     public void setMinScore(Integer minScore) {
         this.minScore = minScore;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 
     public List<CourseRecord> getCourseRecords() {

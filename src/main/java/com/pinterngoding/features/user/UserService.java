@@ -4,6 +4,7 @@ import com.pinterngoding.entity.User;
 import com.pinterngoding.features.user.interfaces.IUserRepository;
 import com.pinterngoding.features.user.interfaces.IUserService;
 import com.pinterngoding.shared.classes.BaseService;
+import com.pinterngoding.shared.constants.UserType;
 import jakarta.persistence.NoResultException;
 
 public class UserService extends BaseService<User> implements IUserService {
@@ -19,6 +20,7 @@ public class UserService extends BaseService<User> implements IUserService {
         if (getByEmail(newUser.getEmail()) != null) {
             return false;
         }
+        newUser.setUserType(UserType.STUDENT);
         newUser.setActive(false);
 
         return create(newUser);

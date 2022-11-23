@@ -51,24 +51,24 @@ public class TestingTesting {
         ICourseRecordRepository courseRecordRepository = new CourseRecordRepository(em);
         ICourseRecordService courseRecordService = new CourseRecordService(courseRecordRepository);
 
-        User user = new User();
-        user.setEmail("student@ngoding.id");
-        user.setPassword("student");
-        user.setUserType(UserType.STUDENT);
-
-        Student student = new Student();
-        student.setFirstName("Stu");
-        student.setLastName("dent");
-        student.setNickname("student");
-        student.setAddress("Somewhere");
-        student.setPhone("088534238491");
-        student.setIdentityNumber("984127125781");
-        student.setEducation(Education.D4);
-        student.setUser(user);
-        user.setStudent(student);
+//        User user = new User();
+//        user.setEmail("student@ngoding.id");
+//        user.setPassword("student");
+//        user.setUserType(UserType.STUDENT);
+//
+//        Student student = new Student();
+//        student.setFirstName("Stu");
+//        student.setLastName("dent");
+//        student.setNickname("student");
+//        student.setAddress("Somewhere");
+//        student.setPhone("088534238491");
+//        student.setIdentityNumber("984127125781");
+//        student.setEducation(Education.D4);
+//        student.setUser(user);
+//        user.setStudent(student);
 
 //        System.out.println(userService.register(user));
-        student = studentService.getById(3L);
+//        student = studentService.getById(3L);
 
 //        System.out.println(userService.getByEmail(user.getEmail()));
 //
@@ -92,38 +92,38 @@ public class TestingTesting {
 //        user.setActive(userActivationService.activateUser(userActivation.getActivationCode()));
 //        System.out.println(user.getActive());
 
-        System.out.println("Login Activated");
-        try {
-            System.out.println(authService.login(user.getEmail(), user.getPassword()) == null);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println("Create Course");
-        Course course = new Course();
-        course.setTitle("React");
-        course.setDescription("30 days basic react and redux course");
-        course.setStartDate(Date.valueOf("2022-11-25"));
-        course.setDuration(30);
-        course.setPricingType(PricingType.PREMIUM);
-        course.setPrice(500000);
-        course.setTrainingCategory(CourseCategory.FRONTEND);
-        course.setMinScore(70);
+//        System.out.println("Login Activated");
+//        try {
+//            System.out.println(authService.login(user.getEmail(), user.getPassword()) == null);
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        }
+//
+//        System.out.println("Create Course");
+//        Course course = new Course();
+//        course.setTitle("React");
+//        course.setDescription("30 days basic react and redux course");
+//        course.setStartDate(Date.valueOf("2022-11-25"));
+//        course.setDuration(30);
+//        course.setPricingType(PricingType.PREMIUM);
+//        course.setPrice(500000);
+//        course.setTrainingCategory(CourseCategory.FRONTEND);
+//        course.setMinScore(70);
 
 //        courseService.create(course);
 
-        course = courseService.getById(1L);
-
-        System.out.println(course);
-
-        System.out.println(courseRecordService.registerToCourse(student, course));
-
-        CourseRecord courseRecord = student.getCourseRecords().get(0);
-
-        courseRecord.setApproved(true);
-        courseRecord.setScore(80);
-        courseRecordService.update(courseRecord);
-        System.out.println(courseRecord.getScore());
+//        course = courseService.getById(1L);
+//
+//        System.out.println(course);
+//
+//        System.out.println(courseRecordService.registerToCourse(student, course));
+//
+//        CourseRecord courseRecord = student.getCourseRecords().get(0);
+//
+//        courseRecord.setApproved(true);
+//        courseRecord.setScore(80);
+//        courseRecordService.update(courseRecord);
+//        System.out.println(courseRecord.getScore());
 
         JPAUtility.close();
     }
